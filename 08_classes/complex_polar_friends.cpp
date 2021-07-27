@@ -6,11 +6,11 @@
 #include <cassert>
 
 class complex {
-  private: // accesible only from class methods or friend functions and classes
+  private: // accessible only from class methods or friend functions and classes
     double r_;
     double phi_;
 
-  public: // accesible from anywhere
+  public: // accessible from anywhere
     // Constructors
     complex() {
         r_ = 0.0;

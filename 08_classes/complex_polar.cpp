@@ -6,11 +6,11 @@
 #include <cassert>
 
 class complex {
-  private: // accesible only from class methods or friend functions and classes
+  private: // accessible only from class methods or friend functions and classes
     double r_;
     double phi_;
 
-  public: // accesible from anywhere
+  public: // accessible from anywhere
     // Constructor
     complex(const double real, const double imag) {
         r_ = std::sqrt(real * real + imag * imag);
