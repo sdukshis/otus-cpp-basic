@@ -69,8 +69,16 @@ bool read_and_process(std::istream &in) {
     return true;
 }
 
-int main() {
-    std::ifstream file("data.dat", std::ios::binary);
+int main(int argc, char *argv[]) {
+    if (argc < 2) {
+        std::cerr << "Usage: " << argv[0] << " datafile\n";
+        return EXIT_FAILURE;
+    }
+    std::ifstream file(argv[1], std::ios::binary);
+    if (!file) {
+        std::cerr << "Error openning " << argv[1] << '\n';
+        return EXIT_FAILURE;
+    }
     if (!read_and_process(file)) {
         std::cerr << "Error read_and_prcess\n";
         return EXIT_FAILURE;
