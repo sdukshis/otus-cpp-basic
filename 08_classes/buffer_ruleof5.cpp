@@ -52,7 +52,7 @@ buffer & buffer::operator=(const buffer &other) {
 }
 
 buffer::~buffer() {
-    free();
+    delete[] data_;
 }
 
 void buffer::resize(std::size_t size) {
