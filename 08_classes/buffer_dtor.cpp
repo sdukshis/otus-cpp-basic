@@ -12,7 +12,7 @@ class buffer {
   public:
     buffer();
 
-    buffer(std::size_t size);
+    explicit buffer(std::size_t size);
 
     // Destructor
     ~buffer();

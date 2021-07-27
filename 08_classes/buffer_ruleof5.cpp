@@ -13,7 +13,7 @@ class buffer {
   public:
     buffer(); // default constructor
 
-    buffer(std::size_t size);
+    explicit buffer(std::size_t size);
 
     buffer(const buffer &other); // copy constructor
 
