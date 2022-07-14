@@ -53,6 +53,7 @@ void print(std::ostream &out, const complex &z) {
 int main() {
     using std::cout;
     complex z;
+    cout << "z = "; print(cout, z); cout << '\n';
     z.real = 1.0; z.imag = 1.0;
     cout << "abs(z) = " << abs(z) << '\n';
     cout << "angle(z) = " << angle(z) << '\n';

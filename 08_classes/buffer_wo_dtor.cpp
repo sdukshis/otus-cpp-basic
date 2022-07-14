@@ -58,6 +58,7 @@ bool read_and_process(std::istream &in) {
     buffer body(body_size);
     if (!in.read(body.data(), body.size())) {
         std::cerr << "Error on reading body data\n";
+        header.free();
         body.free();
         return false;
     }
